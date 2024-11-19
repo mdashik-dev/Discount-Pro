@@ -1,0 +1,257 @@
+[
+    {
+        "_id": "1",
+        "brand_name": "Nike",
+        "rating": 4.7,
+        "description": "Leading brand in athletic footwear, apparel, and equipment.",
+        "brand_logo": "https://static.vecteezy.com/system/resources/previews/020/336/037/non_2x/samsung-logo-samsung-icon-free-free-vector.jpg",
+        "coupons": [
+            {
+                "coupon_code": "NIKE10",
+                "description": "10% off on select items.",
+                "expiry_date": "2024-12-31",
+                "condition": "Valid on full-price items only.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "NIKE20",
+                "description": "20% off on Nike shoes.",
+                "expiry_date": "2025-01-15",
+                "condition": "Valid on shoes only.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "NIKEFREE",
+                "description": "Free shipping on orders over $100.",
+                "expiry_date": "2024-12-31",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.nike.com",
+        "category": "Footwear",
+        "isSaleOn": true
+    },
+    {
+        "_id": "2",
+        "brand_name": "Adidas",
+        "rating": 4.6,
+        "description": "Innovative sportswear brand known for its athletic footwear.",
+        "brand_logo": "https://images.seeklogo.com/logo-png/16/1/adidas-logo-png_seeklogo-168370.png?v=638653746710000000",
+        "coupons": [
+            {
+                "coupon_code": "ADIDAS15",
+                "description": "15% off on selected sneakers.",
+                "expiry_date": "2024-11-30",
+                "condition": "Minimum order of $100.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "ADIDAS10",
+                "description": "10% off on all purchases over $50.",
+                "expiry_date": "2024-12-15",
+                "condition": "Valid on orders above $50.",
+                "coupon_type": "Discount"
+            }
+        ],
+        "shop_Link": "https://www.adidas.com",
+        "category": "Sportswear",
+        "isSaleOn": false
+    },
+    {
+        "_id": "3",
+        "brand_name": "Amazon",
+        "rating": 4.8,
+        "description": "World's largest online retailer.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Amazon_logo.svg",
+        "coupons": [
+            {
+                "coupon_code": "AMZN5",
+                "description": "5% off on electronics.",
+                "expiry_date": "2025-01-01",
+                "condition": "Available to prime members only.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "AMZN15",
+                "description": "15% off on home appliances.",
+                "expiry_date": "2025-01-31",
+                "condition": "Valid on home appliances only.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "AMZNSHIP",
+                "description": "Free shipping on orders over $50.",
+                "expiry_date": "2024-12-31",
+                "condition": "No minimum purchase required.",
+                "coupon_type": "Free Shipping"
+            }
+        ],
+        "shop_Link": "https://www.amazon.com",
+        "category": "E-commerce",
+        "isSaleOn": true
+    },
+    {
+        "_id": "4",
+        "brand_name": "Apple",
+        "rating": 4.9,
+        "description": "Innovative technology brand known for its iPhones, MacBooks, and accessories.",
+        "brand_logo": "https://logodownload.org/wp-content/uploads/2013/12/apple-logo-2-1.png",
+        "coupons": [
+            {
+                "coupon_code": "APPLE20",
+                "description": "20% off on accessories with any purchase.",
+                "expiry_date": "2025-02-28",
+                "condition": "Valid on orders over $200.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "APPLE10",
+                "description": "10% off on iPhone cases.",
+                "expiry_date": "2024-12-31",
+                "condition": "Valid on iPhone case purchases only.",
+                "coupon_type": "Discount"
+            }
+        ],
+        "shop_Link": "https://www.apple.com",
+        "category": "Technology",
+        "isSaleOn": true
+    },
+    {
+        "_id": "5",
+        "brand_name": "Samsung",
+        "rating": 4.7,
+        "description": "Global leader in consumer electronics and home appliances.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Samsung_Logo.svg",
+        "coupons": [
+            {
+                "coupon_code": "SAMSUNG10",
+                "description": "10% off on smartphones.",
+                "expiry_date": "2025-03-15",
+                "condition": "Excludes Galaxy Z Fold series.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "SAMSUNG100",
+                "description": "$100 off on Samsung tablets.",
+                "expiry_date": "2024-12-31",
+                "condition": "Valid on all tablets.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "SAMSUNGSAVE",
+                "description": "Save 5% on all home appliances.",
+                "expiry_date": "2025-02-28",
+                "condition": "Valid on home appliances only.",
+                "coupon_type": "Discount"
+            }
+        ],
+        "shop_Link": "https://www.samsung.com",
+        "category": "Electronics",
+        "isSaleOn": false
+    },
+    {
+        "_id": "6",
+        "brand_name": "H&M",
+        "rating": 4.4,
+        "description": "International fashion brand offering clothing for men, women, and kids.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/H%26M-Logo.svg/2560px-H%26M-Logo.svg.png",
+        "coupons": [
+            {
+                "coupon_code": "HM25",
+                "description": "25% off on all new arrivals.",
+                "expiry_date": "2024-12-15",
+                "condition": "Valid on orders over $75.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "HM50",
+                "description": "50% off on selected jackets.",
+                "expiry_date": "2024-12-01",
+                "condition": "Valid on jackets only.",
+                "coupon_type": "Discount"
+            }
+        ],
+        "shop_Link": "https://www.hm.com",
+        "category": "Clothing",
+        "isSaleOn": true
+    },
+    {
+        "_id": "7",
+        "brand_name": "Zara",
+        "rating": 4.5,
+        "description": "Trendy and affordable fashion for men, women, and children.",
+        "brand_logo": "https://www.logo.wine/a/logo/Zara_(retailer)/Zara_(retailer)-Logo.wine.svg",
+        "coupons": [
+            {
+                "coupon_code": "ZARA20",
+                "description": "20% off on all orders.",
+                "expiry_date": "2024-11-30",
+                "condition": "No minimum order required.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "ZARA25",
+                "description": "25% off on selected dresses.",
+                "expiry_date": "2024-12-10",
+                "condition": "Valid on dresses only.",
+                "coupon_type": "Discount"
+            }
+        ],
+        "shop_Link": "https://www.zara.com",
+        "category": "Fashion",
+        "isSaleOn": false
+    },
+    {
+        "_id": "8",
+        "brand_name": "Sony",
+        "rating": 4.8,
+        "description": "Leading manufacturer of electronics, gaming consoles, and entertainment systems.",
+        "brand_logo": "https://logos-world.net/wp-content/uploads/2020/06/Sony-Logo.jpg",
+        "coupons": [
+            {
+                "coupon_code": "SONY25",
+                "description": "25% off on selected gaming accessories.",
+                "expiry_date": "2024-12-31",
+                "condition": "Valid on PS5 accessories only.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "SONY15",
+                "description": "15% off on Sony TVs.",
+                "expiry_date": "2024-12-15",
+                "condition": "Valid on selected TV models.",
+                "coupon_type": "Discount"
+            }
+        ],
+        "shop_Link": "https://www.sony.com",
+        "category": "Electronics",
+        "isSaleOn": true
+    },
+    {
+        "_id": "9",
+        "brand_name": "Microsoft",
+        "rating": 4.6,
+        "description": "Technology giant known for software, computing, and gaming consoles.",
+        "brand_logo": "https://upload.wikimedia.org/wikipedia/commons/a/a4/Microsoft_logo.svg",
+        "coupons": [
+            {
+                "coupon_code": "MSOFT25",
+                "description": "25% off on Microsoft Surface devices.",
+                "expiry_date": "2025-01-31",
+                "condition": "Valid on Surface Laptop and Pro only.",
+                "coupon_type": "Discount"
+            },
+            {
+                "coupon_code": "MSOFT10",
+                "description": "10% off on Office 365 subscriptions.",
+                "expiry_date": "2025-02-28",
+                "condition": "Valid on yearly plans only.",
+                "coupon_type": "Discount"
+            }
+        ],
+        "shop_Link": "https://www.microsoft.com",
+        "category": "Technology",
+        "isSaleOn": true
+    }
+]
