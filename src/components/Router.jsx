@@ -9,6 +9,8 @@ import Profile from "../pages/Profile";
 import NotFound from "./NotFound";
 import Root from "./Root";
 import PrivateRoute from "./PrivateRoute";
+import ResetPassword from "../pages/ResetPassword";
+import AboutUs from "../pages/About";
 
 function Router({ children }) {
   const router = createBrowserRouter([
@@ -24,6 +26,10 @@ function Router({ children }) {
         {
           path: "/brands",
           element: <Brands />,
+        },
+        {
+          path: "/about",
+          element: <AboutUs />,
         },
         {
           path: "/brand/:id",
@@ -43,7 +49,15 @@ function Router({ children }) {
         },
         {
           path: "/my-profile",
-          element: <Profile />,
+          element: (
+            <PrivateRoute>
+              <Profile />
+            </PrivateRoute>
+          ),
+        },
+        {
+          path: "/reset-password",
+          element: <ResetPassword />,
         },
         {
           path: "*",

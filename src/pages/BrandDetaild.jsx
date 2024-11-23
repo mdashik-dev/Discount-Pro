@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router-dom";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Helmet } from "react-helmet-async";
 
 function BrandDetaild() {
   const [brand, setbrand] = useState([]);
@@ -26,6 +27,9 @@ function BrandDetaild() {
 
   return (
     <div className="min-h-screen bg-gray-50 py-6 px-4">
+      <Helmet>
+        <title>Detail || Discount Pro</title>
+      </Helmet>
       <h3 className="text-3xl font-bold text-center mb-5">
         {brand?.brand_name}'s Details
       </h3>
@@ -75,10 +79,9 @@ function BrandDetaild() {
               </div>
             </div>
           ))}
+          <ToastContainer position="bottom-center" />
         </div>
       </div>
-
-      <ToastContainer position="bottom-center" autoClose={2000} />
     </div>
   );
 }

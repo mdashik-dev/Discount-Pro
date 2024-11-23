@@ -1,23 +1,44 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { MainAuthContext } from "../context/AuthContext";
 import { toast } from "react-toastify";
+import { FaBars, FaTimes } from "react-icons/fa";
 
 function Header() {
   const { user, logOut } = useContext(MainAuthContext);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const handleLogOut = () => {
     logOut();
     toast.success("Successfully Logged Out");
   };
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
   return (
     <div>
-      <nav className="bg-transparent sticky top-0 p-4">
+      <nav className="bg-transparent sticky top-0 p-4 shadow-sm">
         <div className="container mx-auto flex justify-between items-center">
           <div className="text-xl font-bold">
             <Link to="/">Discount Pro</Link>
           </div>
-          <ul className="flex items-center space-x-6">
+
+          <div
+            className="lg:hidden text-2xl cursor-pointer"
+            onClick={toggleMenu}
+          >
+            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          </div>
+
+          <ul
+            className={`lg:flex items-center space-x-6 ${
+              isMenuOpen
+                ? "block absolute top-16 left-0 bg-white w-full p-4 shadow-md z-10"
+                : "hidden lg:flex"
+            }`}
+          >
             <li>
               <Link to="/" className="hover:text-yellow-400">
                 Home
@@ -49,11 +70,17 @@ function Header() {
               </>
             )}
             {user?.uid ? (
-              <img
-                alt={user?.displayName}
-                className="w-9 rounded-full"
-                src={user?.photoURL}
-              />
+              <Link to="/my-profile">
+                <img
+                  alt={
+                    user?.displayName
+                      ? user?.displayName
+                      : user?.email.slice(0, 2)
+                  }
+                  className="w-9 rounded-full mt-3 lg:mt-0"
+                  src={user?.photoURL}
+                />
+              </Link>
             ) : (
               <li>
                 <Link to="/login" className="hover:text-yellow-400">

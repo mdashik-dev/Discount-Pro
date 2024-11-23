@@ -1,7 +1,19 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { MainAuthContext } from "../context/AuthContext";
 
 function CouponCard({ brand }) {
+  const { user } = useContext(MainAuthContext);
+  const navigate = useNavigate();
+
+  const handleViewCoupons = () => {
+    if (user?.uid) {
+      navigate(`/brand/${brand?._id}`);
+    } else {
+      navigate("/login", { state: { to: `/brand/${brand?._id}` } });
+    }
+  };
+
   return (
     <div className="card w-full bg-base-100">
       {/* Brand Info */}
@@ -13,22 +25,35 @@ function CouponCard({ brand }) {
         />
       </figure>
       <div className="card-body">
-        <h2 className="card-title text-2xl font-semibold">
-          {brand.brand_name}
-        </h2>
-        <p className="text-sm text-gray-500">{brand.description}</p>
-        <div className="flex items-center mt-3">
-          <span className="text-yellow-500">⭐</span>
-          <span className="ml-2 text-lg">{brand.rating}</span>
+        <div className="flex items-center justify-between">
+          {/* Brand Name and Rating */}
+          <h2 className="card-title text-xl font-semibold">{brand.brand_name}</h2>
+          <div className="flex items-center">
+            <span className="text-yellow-500 text-lg">⭐</span>
+            <span className="ml-2 text-lg">{brand.rating}</span>
+          </div>
         </div>
+
+        {/* Description */}
+        <p className="text-sm text-gray-500 mt-2">{brand.description}</p>
+
+        {/* Sale is On Bouncing Text */}
+        {brand.isSaleOn && (
+          <div className="mt-3">
+            <span className="animate-bounce text-red-600 font-bold text-sm">
+              SALE IS ON!
+            </span>
+          </div>
+        )}
+
+        {/* View Coupons Button */}
         <div className="card-actions justify-between mt-5">
-          <Link
-            to={`/brand/${brand?._id}`}
-            rel="noopener noreferrer"
+          <button
+            onClick={handleViewCoupons}
             className="btn btn-primary text-white"
           >
-            Detail
-          </Link>
+            View Coupons
+          </button>
           <span className="badge badge-accent">{brand.category}</span>
         </div>
       </div>
